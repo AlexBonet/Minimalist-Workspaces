@@ -91,4 +91,4 @@ tests/
 ```
 
 ---
-© 2026 Alex. Developed for Master's Thesis.
+© 2026 AlexBonet.

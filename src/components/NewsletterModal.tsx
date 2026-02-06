@@ -58,7 +58,10 @@ export default function NewsletterModal({ lang = "en" }: NewsletterModalProps) {
           />
 
           {/* Modal Container: Strictly square, white bg, thick black border */}
-          <div className="relative z-10 w-full max-w-[500px] aspect-square bg-white border-2 border-black p-8 md:p-12 flex flex-col justify-between shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+          <div
+            data-testid="newsletter-modal"
+            className="relative z-10 w-full max-w-[500px] aspect-square bg-white border-2 border-black p-8 md:p-12 flex flex-col justify-between shadow-2xl animate-in fade-in zoom-in-95 duration-200"
+          >
             {/* Header */}
             <div className="flex justify-between items-start">
               <h2 className="text-5xl md:text-6xl font-bold tracking-tighter leading-[0.85] whitespace-pre-line">

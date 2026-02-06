@@ -1,5 +1,6 @@
 ---
 import { ui } from "../i18n/ui";
+import NewsletterModal from "./NewsletterModal";
 
 interface Props {
   lang: "es" | "en";
@@ -48,32 +49,40 @@ const t = ui[lang];
     <div
       class="lg:col-span-4 p-6 md:p-12 flex flex-col justify-between min-h-[300px] lg:min-h-[400px]"
     >
-      <div class="w-full flex flex-col items-start lg:items-end">
-        <span
-          class="text-xs font-bold uppercase tracking-widest underline decoration-1 underline-offset-4 mb-4 block"
-        >
-          {t["footer.connect.label"]}
-        </span>
-        <nav class="flex flex-col gap-2 items-start lg:items-end w-full">
-          {
-            [
-              { text: t["footer.connect.github"], url: "https://github.com" },
-              {
-                text: t["footer.connect.linkedin"],
-                url: "https://linkedin.com",
-              },
-            ].map((link) => (
-              <a
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-4xl md:text-5xl font-bold tracking-tighter hover:bg-black hover:text-white transition-colors duration-300 block py-2 px-1 -mr-1"
-              >
-                {link.text}
-              </a>
-            ))
-          }
-        </nav>
+      <div
+        class="w-full flex flex-col items-start lg:items-end justify-between h-full"
+      >
+        <div>
+          <span
+            class="text-xs font-bold uppercase tracking-widest underline decoration-1 underline-offset-4 mb-4 block text-left lg:text-right"
+          >
+            {t["footer.connect.label"]}
+          </span>
+          <nav class="flex flex-col gap-2 items-start lg:items-end w-full">
+            {
+              [
+                { text: t["footer.connect.github"], url: "https://github.com" },
+                {
+                  text: t["footer.connect.linkedin"],
+                  url: "https://linkedin.com",
+                },
+              ].map((link) => (
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-4xl md:text-5xl font-bold tracking-tighter hover:bg-black hover:text-white transition-colors duration-300 block py-2 px-1 -mr-1"
+                >
+                  {link.text}
+                </a>
+              ))
+            }
+          </nav>
+        </div>
+
+        <div class="mt-8 lg:mt-0">
+          <NewsletterModal client:load lang={lang} />
+        </div>
       </div>
     </div>
   </div>

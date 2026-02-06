@@ -91,4 +91,5 @@ tests/
 ```
 
 ---
-© 2026 Alex. Desarrollado para Trabajo de Fin de Máster.
+© 2026 AlexBonet.
+∫
