@@ -1,0 +1,23 @@
+{
+  "title": {
+    "es": "Loft del Diseñador",
+    "en": "Designer Loft"
+  },
+  "description": {
+    "es": "Ecléctico, vibrante y lleno de carácter. Este loft combina arte y tecnología, rodeando al diseñador de estímulos visuales que alimentan la imaginación en cada proyecto.",
+    "en": "Eclectic, vibrant, and full of character. This loft combines art and technology, surrounding the designer with visual stimuli that fuel the imagination in every project."
+  },
+  "coverImage": "../../assets/placeholders/mw12.jpg",
+  "tags": [
+    "Apple",
+    "Light",
+    "Workspace"
+  ],
+  "specs": {
+    "computer": "MacBook Pro M3",
+    "monitor": "Pro Display XDR",
+    "keyboard": "HHKB Hybrid",
+    "mouse": "MX Master 3S"
+  },
+  "publishDate": "2024-12-05"
+}

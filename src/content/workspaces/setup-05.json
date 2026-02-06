@@ -1,0 +1,23 @@
+{
+  "title": {
+    "es": "Minimalismo Industrial",
+    "en": "Industrial Minimalism"
+  },
+  "description": {
+    "es": "Hormigón, metal y luz cruda. Un espacio que celebra la honestidad de los materiales, despojando lo superfluo para revelar la belleza de lo esencial en un entorno robusto y funcional.",
+    "en": "Concrete, metal, and raw light. A space that celebrates the honesty of materials, stripping away the superfluous to reveal the beauty of the essential in a robust and functional environment."
+  },
+  "coverImage": "../../assets/placeholders/mw5.jpg",
+  "tags": [
+    "Dark",
+    "Wood",
+    "Workspace"
+  ],
+  "specs": {
+    "computer": "Mac Mini Pro",
+    "monitor": "LG UltraFine",
+    "keyboard": "NuPhy Air75",
+    "mouse": "Logitech Lift"
+  },
+  "publishDate": "2024-05-12"
+}

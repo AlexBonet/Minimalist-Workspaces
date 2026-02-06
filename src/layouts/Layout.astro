@@ -1,0 +1,193 @@
+---
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import NewsletterModal from "../components/NewsletterModal";
+
+interface Props {
+  title: string;
+  lang: "es" | "en";
+  showHeader?: boolean;
+  showFooter?: boolean;
+  mainClass?: string;
+  description?: string;
+  image?: string;
+  page?: {
+    currentPage: number;
+    lastPage: number;
+    url: {
+      prev: string | undefined;
+      next: string | undefined;
+    };
+  };
+}
+
+import { ui } from "../i18n/ui";
+
+const {
+  title,
+  lang,
+  page,
+  showHeader = true,
+  showFooter = true,
+  mainClass = "px-6 md:px-12 pb-24 min-h-screen",
+} = Astro.props;
+
+// Toggle Language Logic
+const currentPath = Astro.url.pathname;
+const targetLang = lang === "es" ? "en" : "es";
+
+// Replace the first occurrence of the current lang in the path
+// Matches /es or /en at the start of the path
+const targetPath = currentPath.replace(
+  new RegExp(`^/${lang}`),
+  `/${targetLang}`,
+);
+
+const lastPage = page?.lastPage ?? 1;
+const currentPage = page?.currentPage ?? 1;
+const pageNumbers = Array.from({ length: lastPage }, (_, i) => i + 1);
+
+const t = ui[lang];
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Minimalist Workspaces Gallery" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta
+      property="og:description"
+      content={Astro.props.description || "Minimalist Workspaces Gallery"}
+    />
+    {
+      Astro.props.image && (
+        <meta
+          property="og:image"
+          content={new URL(Astro.props.image, Astro.url)}
+        />
+      )
+    }
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta
+      property="twitter:description"
+      content={Astro.props.description || "Minimalist Workspaces Gallery"}
+    />
+    {
+      Astro.props.image && (
+        <meta
+          property="twitter:image"
+          content={new URL(Astro.props.image, Astro.url)}
+        />
+      )
+    }
+  </head>
+  <body
+    class="bg-white text-black antialiased selection:bg-black selection:text-white flex flex-col min-h-screen font-sans"
+  >
+    {
+      showHeader && (
+        <nav class="w-full px-6 py-8 md:px-12 grid grid-cols-3 items-center border-b-2 border-black mb-12">
+          {/* Logo */}
+          <a
+            href={`/${lang}/`}
+            class="text-2xl font-black tracking-tighter uppercase leading-none block justify-self-start"
+          >
+            Minimalist
+            <br />
+            Workspaces
+          </a>
+
+          {/* Center: Newsletter */}
+          <div class="justify-self-center">
+            <NewsletterModal client:load lang={lang} />
+          </div>
+
+          {/* Right Nav */}
+          <div class="flex items-center gap-8 justify-self-end">
+            <div class="flex items-center gap-6 text-[10px] md:text-xs font-bold uppercase tracking-widest">
+              <a href={`/${lang}/`} class="hover:underline">
+                {t["nav.archive"]}
+              </a>
+              <a href={`/${lang}/about`} class="hover:underline">
+                {t["nav.about"]}
+              </a>
+              {/* Lang Toggle embedded */}
+              <a href={targetPath} class="hover:underline text-gray-500">
+                {targetLang}
+              </a>
+            </div>
+            <a
+              href={`/${lang}/upgrade`}
+              class="bg-black text-white px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-gray-800 transition-colors"
+            >
+              {t["nav.login"]}
+            </a>
+          </div>
+        </nav>
+      )
+    }
+
+    <main class={`flex-grow ${mainClass}`}>
+      <slot />
+
+      <!-- Pagination (moved from footer) -->
+      {
+        page && (
+          <div class="flex flex-col md:flex-row justify-between items-center mt-24 pt-12 border-t-2 border-black">
+            <span class="text-xs font-bold uppercase tracking-widest">
+              {t["pagination.page"]}
+              {page.currentPage.toString().padStart(2, "0")} /{" "}
+              {page.lastPage.toString().padStart(2, "0")}
+            </span>
+
+            <div class="flex items-center gap-2 mt-4 md:mt-0">
+              <a
+                href={page.url.prev}
+                class={`w-8 h-8 flex items-center justify-center transition-colors ${!page.url.prev ? "opacity-25 cursor-not-allowed pointer-events-none" : "hover:bg-gray-200"}`}
+                aria-label="Previous Page"
+              >
+                &larr;
+              </a>
+
+              {pageNumbers.map((num) => (
+                <a
+                  href={num === 1 ? `/${lang}/` : `/${lang}/${num}`}
+                  class={`w-8 h-8 flex items-center justify-center text-xs font-bold transition-colors ${
+                    num === currentPage
+                      ? "bg-black text-white"
+                      : "hover:bg-gray-200"
+                  }`}
+                >
+                  {num.toString().padStart(2, "0")}
+                </a>
+              ))}
+
+              <a
+                href={page.url.next}
+                class={`w-8 h-8 flex items-center justify-center transition-colors ${!page.url.next ? "opacity-25 cursor-not-allowed pointer-events-none" : "hover:bg-gray-200"}`}
+                aria-label="Next Page"
+              >
+                &rarr;
+              </a>
+            </div>
+          </div>
+        )
+      }
+    </main>
+
+    {showFooter && <Footer lang={lang} />}
+  </body>
+</html>

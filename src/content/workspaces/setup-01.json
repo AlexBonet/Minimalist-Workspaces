@@ -1,0 +1,23 @@
+{
+  "title": {
+    "es": "Estudio Monocromo",
+    "en": "Monochrome Studio"
+  },
+  "description": {
+    "es": "Un estudio donde el contraste es el protagonista. La paleta estricta de blancos y negros elimina el ruido visual, permitiendo que las ideas fluyan con claridad absoluta en un entorno de sofisticación atemporal.",
+    "en": "A studio where contrast takes center stage. The strict black and white palette eliminates visual noise, allowing ideas to flow with absolute clarity in an environment of timeless sophistication."
+  },
+  "coverImage": "../../assets/placeholders/mw1.jpg",
+  "tags": [
+    "Setup",
+    "Tech",
+    "Workspace"
+  ],
+  "specs": {
+    "computer": "Mac Studio",
+    "monitor": "Studio Display",
+    "keyboard": "Keychron Q1",
+    "mouse": "Magic Trackpad"
+  },
+  "publishDate": "2024-02-15"
+}

@@ -1,0 +1,23 @@
+{
+  "title": {
+    "es": "Rincón de Lectura",
+    "en": "Reading Corner"
+  },
+  "description": {
+    "es": "Más que un escritorio, un lugar de pausa. Este rincón equilibra el mundo digital con el analógico, proporcionando un espacio sereno para la lectura, la reflexión y el trabajo pausado.",
+    "en": "More than a desk, a place of pause. This corner balances the digital and analog worlds, providing a serene space for reading, reflection, and slow work."
+  },
+  "coverImage": "../../assets/placeholders/mw11.jpg",
+  "tags": [
+    "Tech",
+    "Dark",
+    "Workspace"
+  ],
+  "specs": {
+    "computer": "Mac Mini Pro",
+    "monitor": "LG UltraFine",
+    "keyboard": "NuPhy Air75",
+    "mouse": "Logitech Lift"
+  },
+  "publishDate": "2024-11-10"
+}

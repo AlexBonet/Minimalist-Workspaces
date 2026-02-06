@@ -1,0 +1,23 @@
+{
+  "title": {
+    "es": "Estudio Medianoche",
+    "en": "Midnight Studio"
+  },
+  "description": {
+    "es": "Cuando el sol se pone, este setup brilla. Iluminación ambiental controlada y tonos profundos crean una atmósfera íntima y misteriosa, perfecta para los creadores nocturnos.",
+    "en": "When the sun goes down, this setup shines. Controlled ambient lighting and deep tones create an intimate and mysterious atmosphere, perfect for night owls and creators."
+  },
+  "coverImage": "../../assets/placeholders/mw10.jpg",
+  "tags": [
+    "Desk",
+    "Apple",
+    "Workspace"
+  ],
+  "specs": {
+    "computer": "Mac Studio",
+    "monitor": "Studio Display",
+    "keyboard": "Keychron Q1",
+    "mouse": "Magic Trackpad"
+  },
+  "publishDate": "2024-10-31"
+}

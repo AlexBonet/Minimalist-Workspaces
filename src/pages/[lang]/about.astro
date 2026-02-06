@@ -1,0 +1,106 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getEntry } from "astro:content";
+
+export function getStaticPaths() {
+  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
+}
+
+const { lang } = Astro.params as { lang: "es" | "en" };
+
+const aboutEntry = await getEntry("about", lang);
+if (!aboutEntry) {
+  return Astro.redirect(`/${lang}/`);
+}
+
+const { Content } = await aboutEntry.render();
+const { title, subtitle, role, location } = aboutEntry.data;
+---
+
+<Layout title={title} lang={lang}>
+  <article class="max-w-3xl">
+    <!-- Header Swiss Style -->
+    <header class="mb-16 border-b-2 border-black pb-12">
+      <p class="text-xs font-bold uppercase tracking-widest mb-4 opacity-50">
+        {role} · {location}
+      </p>
+      <h1
+        class="text-5xl md:text-7xl font-black tracking-tighter uppercase leading-none mb-4"
+      >
+        {title}
+      </h1>
+      {
+        subtitle && (
+          <p class="text-lg md:text-xl font-medium tracking-tight opacity-70">
+            {subtitle}
+          </p>
+        )
+      }
+    </header>
+
+    <!-- Markdown Content with Swiss Typography -->
+    <div class="prose-swiss">
+      <Content />
+    </div>
+  </article>
+</Layout>
+
+<style>
+  /* Swiss Style Prose - Vanilla CSS */
+  .prose-swiss :global(h2) {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .prose-swiss :global(p) {
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+    max-width: 65ch;
+  }
+
+  .prose-swiss :global(strong) {
+    font-weight: 700;
+  }
+
+  .prose-swiss :global(ul) {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .prose-swiss :global(li) {
+    font-size: 1rem;
+    line-height: 1.75;
+    padding-left: 1rem;
+    border-left: 2px solid black;
+  }
+
+  .prose-swiss :global(blockquote) {
+    border-left: 4px solid black;
+    padding-left: 1.5rem;
+    font-style: italic;
+    font-size: 1.125rem;
+    margin: 2rem 0;
+    opacity: 0.8;
+  }
+
+  .prose-swiss :global(a) {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: opacity 0.2s;
+  }
+
+  .prose-swiss :global(a:hover) {
+    opacity: 0.7;
+  }
+</style>

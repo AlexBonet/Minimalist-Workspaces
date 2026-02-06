@@ -1,0 +1,68 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+
+export async function getStaticPaths({ paginate }: { paginate: any }) {
+  const workspaces = await getCollection("workspaces");
+  // Sort by date (newest first)
+  // Converting strings/Dates to numbers for subtraction
+  workspaces.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+
+  return ["es", "en"].flatMap((lang) => {
+    return paginate(workspaces, {
+      params: { lang },
+      pageSize: 6,
+    });
+  });
+}
+
+const { page } = Astro.props;
+const { lang } = Astro.params;
+const workspaces = page.data;
+---
+
+<Layout title="Minimalist Workspaces" lang={lang as "es" | "en"} page={page}>
+  <header class="mb-24">
+    <h1
+      class="text-[5rem] md:text-[8rem] lg:text-[10rem] font-black tracking-tighter leading-[0.8] mb-4 uppercase"
+    >
+      Gallery<br />/ 2026
+    </h1>
+  </header>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-24">
+    {
+      workspaces.map((ws: any, i: number) => {
+         // Calculate global index for continuous numbering 
+         const globalIndex = (page.currentPage - 1) * page.size + i + 1;
+         const num = globalIndex.toString().padStart(3, '0');
+         
+         return (
+        <a href={`/${lang}/workspace/${ws.id}`} class="group block">
+          <!-- Image -->
+          <div class="aspect-4/3 w-full overflow-hidden mb-6 bg-gray-100">
+            <Image
+              src={ws.data.coverImage}
+              alt={ws.data.title[lang as "es" | "en"]}
+              class="w-full h-full object-cover grayscale transition-all duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105"
+            />
+          </div>
+          
+          <!-- Meta -->
+          <div class="flex items-start border-t border-transparent pt-2">
+            <!-- Number -->
+            <span class="text-xs font-bold uppercase tracking-widest w-12 pt-1">{num}</span>
+            
+            <!-- Info -->
+            <div class="flex-1">
+                <h2 class="text-sm font-black uppercase tracking-wide group-hover:text-gray-600 transition-colors">
+                    {ws.data.title[lang as "es" | "en"]}
+                </h2>
+            </div>
+          </div>
+        </a>
+      )})
+    }
+  </div>
+</Layout>

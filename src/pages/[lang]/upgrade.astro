@@ -1,0 +1,131 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { ui } from "../../i18n/ui";
+
+export function getStaticPaths() {
+  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
+}
+
+const { lang } = Astro.params as { lang: "es" | "en" };
+
+const t = ui[lang];
+
+const content = {
+  en: {
+    title: "UPGRADE YOUR SETUP",
+    subtitle: "Transform your workspace into a productivity machine",
+    intro:
+      "A cluttered desk reflects a cluttered mind. Let us help you design a workspace that sparks focus and creativity.",
+    steps: [
+      {
+        number: "01",
+        title: "Audit",
+        desc: "We analyze your current setup and identify friction points.",
+      },
+      {
+        number: "02",
+        title: "Design",
+        desc: "We create a personalized plan based on your workflow.",
+      },
+      {
+        number: "03",
+        title: "Execute",
+        desc: "We guide you through the transformation step by step.",
+      },
+    ],
+    cta: "Start Your Transformation",
+    ctaNote: "Free initial consultation",
+  },
+  es: {
+    title: "MEJORA TU SETUP",
+    subtitle:
+      "Transforma tu espacio de trabajo en una máquina de productividad",
+    intro:
+      "Un escritorio desordenado refleja una mente desordenada. Te ayudamos a diseñar un espacio que inspire enfoque y creatividad.",
+    steps: [
+      {
+        number: "01",
+        title: "Auditoría",
+        desc: "Analizamos tu setup actual e identificamos puntos de fricción.",
+      },
+      {
+        number: "02",
+        title: "Diseño",
+        desc: "Creamos un plan personalizado basado en tu flujo de trabajo.",
+      },
+      {
+        number: "03",
+        title: "Ejecución",
+        desc: "Te guiamos en la transformación paso a paso.",
+      },
+    ],
+    cta: "Comienza Tu Transformación",
+    ctaNote: "Consulta inicial gratuita",
+  },
+};
+
+const c = content[lang];
+---
+
+<Layout title={c.title} lang={lang}>
+  <div class="max-w-4xl">
+    <!-- Hero Section -->
+    <header class="mb-20">
+      <h1
+        class="text-5xl md:text-8xl font-black tracking-tighter uppercase leading-[0.85] mb-6"
+      >
+        {c.title}
+      </h1>
+      <p
+        class="text-xl md:text-2xl font-medium tracking-tight opacity-70 max-w-xl"
+      >
+        {c.subtitle}
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <p
+      class="text-lg leading-relaxed max-w-prose mb-16 border-l-4 border-black pl-6"
+    >
+      {c.intro}
+    </p>
+
+    <!-- Steps Grid -->
+    <section class="grid md:grid-cols-3 gap-8 mb-20">
+      {
+        c.steps.map((step) => (
+          <div class="border-t-2 border-black pt-6">
+            <span class="text-6xl font-black tracking-tighter opacity-10 block leading-none">
+              {step.number}
+            </span>
+            <h3 class="text-xs font-bold uppercase tracking-widest mt-4 mb-2">
+              {step.title}
+            </h3>
+            <p class="text-sm leading-relaxed opacity-70">{step.desc}</p>
+          </div>
+        ))
+      }
+    </section>
+
+    <!-- CTA Section -->
+    <section class="border-t-2 border-black pt-12">
+      <div
+        class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+      >
+        <div>
+          <p
+            class="text-xs font-bold uppercase tracking-widest opacity-50 mb-2"
+          >
+            {c.ctaNote}
+          </p>
+        </div>
+        <a
+          href="mailto:hello@minimalistworkspaces.com?subject=Setup%20Upgrade%20Consultation"
+          class="bg-black text-white px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-gray-800 transition-colors inline-block"
+        >
+          {c.cta} →
+        </a>
+      </div>
+    </section>
+  </div>
+</Layout>

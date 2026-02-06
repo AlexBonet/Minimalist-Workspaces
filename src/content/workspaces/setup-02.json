@@ -1,0 +1,23 @@
+{
+  "title": {
+    "es": "Zen Desarrollador",
+    "en": "Developer Zen"
+  },
+  "description": {
+    "es": "El equilibrio perfecto entre tecnología y tranquilidad. Este espacio fusiona la potencia del hardware de vanguardia con una atmósfera serena, creando el ecosistema ideal para largas sesiones de código profundo.",
+    "en": "The perfect balance between technology and tranquility. This space merges the power of cutting-edge hardware with a serene atmosphere, creating the ideal ecosystem for deep coding sessions."
+  },
+  "coverImage": "../../assets/placeholders/mw2.jpg",
+  "tags": [
+    "Desk",
+    "Apple",
+    "Workspace"
+  ],
+  "specs": {
+    "computer": "Mac Mini Pro",
+    "monitor": "LG UltraFine",
+    "keyboard": "NuPhy Air75",
+    "mouse": "Logitech Lift"
+  },
+  "publishDate": "2024-03-10"
+}

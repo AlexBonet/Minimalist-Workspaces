@@ -1,0 +1,23 @@
+{
+  "title": {
+    "es": "Espacio en Blanco",
+    "en": "Blank Space"
+  },
+  "description": {
+    "es": "El lienzo definitivo para nuevas ideas. Un entorno radicalmente blanco que elimina cualquier distracción cromática, simbolizando el potencial infinito de un nuevo proyecto.",
+    "en": "The ultimate canvas for new ideas. A radically white environment that eliminates any chromatic distraction, symbolizing the infinite potential of a new project."
+  },
+  "coverImage": "../../assets/placeholders/mw9.jpg",
+  "tags": [
+    "Setup",
+    "Tech",
+    "Workspace"
+  ],
+  "specs": {
+    "computer": "MacBook Pro M3",
+    "monitor": "Pro Display XDR",
+    "keyboard": "HHKB Hybrid",
+    "mouse": "MX Master 3S"
+  },
+  "publishDate": "2024-09-01"
+}

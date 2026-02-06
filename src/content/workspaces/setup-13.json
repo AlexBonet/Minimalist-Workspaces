@@ -1,0 +1,23 @@
+{
+  "title": {
+    "es": "Estación de Batalla",
+    "en": "Battle Station"
+  },
+  "description": {
+    "es": "Potencia bruta en un diseño elegante. Concebido para tareas de alto rendimiento, este setup no hace concesiones, ofreciendo velocidad y precisión para dominar cualquier desafío digital.",
+    "en": "Raw power in an elegant design. Conceived for high-performance tasks, this setup makes no compromises, offering speed and precision to dominate any digital challenge."
+  },
+  "coverImage": "../../assets/placeholders/mw13.jpg",
+  "tags": [
+    "Dark",
+    "Wood",
+    "Workspace"
+  ],
+  "specs": {
+    "computer": "Mac Studio",
+    "monitor": "Studio Display",
+    "keyboard": "Keychron Q1",
+    "mouse": "Magic Trackpad"
+  },
+  "publishDate": "2024-12-28"
+}

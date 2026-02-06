@@ -1,0 +1,23 @@
+{
+  "title": {
+    "es": "Arquitectura Pura",
+    "en": "Pure Architecture"
+  },
+  "description": {
+    "es": "Líneas limpias y geometría precisa definen este espacio. Inspirado en el brutalismo pero suavizado por la luz, es un tributo a la forma y función en perfecta armonía.",
+    "en": "Clean lines and precise geometry define this workspace. Inspired by brutalism yet softened by light, it is a tribute to form and function in perfect harmony."
+  },
+  "coverImage": "../../assets/placeholders/mw3.jpg",
+  "tags": [
+    "Tech",
+    "Dark",
+    "Workspace"
+  ],
+  "specs": {
+    "computer": "MacBook Pro M3",
+    "monitor": "Pro Display XDR",
+    "keyboard": "HHKB Hybrid",
+    "mouse": "MX Master 3S"
+  },
+  "publishDate": "2024-01-20"
+}

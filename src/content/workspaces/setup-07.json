@@ -1,0 +1,23 @@
+{
+  "title": {
+    "es": "Oasis Digital",
+    "en": "Digital Oasis"
+  },
+  "description": {
+    "es": "La tecnología se encuentra con la naturaleza. Rodeado de vegetación exuberante, este setup respira vida, purificando el aire y la mente para sesiones de trabajo frescas y revigorizantes.",
+    "en": "Technology meets nature. Surrounded by lush greenery, this setup breathes life, purifying the air and the mind for fresh and invigorating work sessions."
+  },
+  "coverImage": "../../assets/placeholders/mw7.jpg",
+  "tags": [
+    "Wood",
+    "Setup",
+    "Workspace"
+  ],
+  "specs": {
+    "computer": "Mac Studio",
+    "monitor": "Studio Display",
+    "keyboard": "Keychron Q1",
+    "mouse": "Magic Trackpad"
+  },
+  "publishDate": "2024-07-08"
+}

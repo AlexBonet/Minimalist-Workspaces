@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', 'Helvetica', 'Arial', sans-serif;
+}
+
+/* Swiss Style Global Reset */
+body {
+  @apply bg-white text-black antialiased;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tighter font-bold;
+}
+
+/* Utilities for Layout */
+.swiss-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}

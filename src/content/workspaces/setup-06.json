@@ -1,0 +1,23 @@
+{
+  "title": {
+    "es": "Luz Nórdica",
+    "en": "Nordic Light"
+  },
+  "description": {
+    "es": "Maximizar la luz natural es el mantra de este escritorio. Maderas claras, tonos pastel suaves y una organización impecable traen la serenidad escandinava a tu jornada laboral.",
+    "en": "Maximizing natural light is this desk's mantra. Light woods, soft pastel tones, and impeccable organization bring Scandinavian serenity to your workday."
+  },
+  "coverImage": "../../assets/placeholders/mw6.jpg",
+  "tags": [
+    "Light",
+    "Minimal",
+    "Workspace"
+  ],
+  "specs": {
+    "computer": "MacBook Pro M3",
+    "monitor": "Pro Display XDR",
+    "keyboard": "HHKB Hybrid",
+    "mouse": "MX Master 3S"
+  },
+  "publishDate": "2024-06-20"
+}

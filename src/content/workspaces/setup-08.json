@@ -1,0 +1,23 @@
+{
+  "title": {
+    "es": "Santuario de Código",
+    "en": "Code Sanctuary"
+  },
+  "description": {
+    "es": "Un templo dedicado a la programación. Cada periférico ha sido elegido por su ergonomía y eficiencia, creando un entorno de inmersión total donde el código es el único lenguaje.",
+    "en": "A temple dedicated to programming. Every peripheral has been chosen for ergonomics and efficiency, creating a total immersion environment where code is the only language."
+  },
+  "coverImage": "../../assets/placeholders/mw8.jpg",
+  "tags": [
+    "Minimal",
+    "Desk",
+    "Workspace"
+  ],
+  "specs": {
+    "computer": "Mac Mini Pro",
+    "monitor": "LG UltraFine",
+    "keyboard": "NuPhy Air75",
+    "mouse": "Logitech Lift"
+  },
+  "publishDate": "2024-08-15"
+}

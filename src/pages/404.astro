@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// 404 is a static file, we default to "en" for the layout structure
+// but display bilingual content strictly.
+const lang = "en";
+---
+
+<Layout
+  title="404 - Not Found"
+  lang={lang}
+  showHeader={false}
+  showFooter={false}
+>
+  <div
+    class="min-h-screen flex flex-col justify-center items-center p-6 text-center"
+  >
+    <h1
+      class="text-[12rem] md:text-[20rem] font-black leading-[0.8] tracking-tighter mb-8"
+    >
+      404
+    </h1>
+
+    <div class="space-y-2 mb-12">
+      <p class="text-xl md:text-2xl font-bold uppercase tracking-widest">
+        Page Not Found
+      </p>
+      <p
+        class="text-sm md:text-base font-medium text-gray-500 uppercase tracking-widest"
+      >
+        Página No Encontrada
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <a
+        href="/en/"
+        class="bg-black text-white px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-zinc-800 transition-colors"
+      >
+        Back to Home
+      </a>
+      <a
+        href="/es/"
+        class="px-8 py-3 text-sm font-bold uppercase tracking-widest border-2 border-black hover:bg-black hover:text-white transition-colors"
+      >
+        Volver al Inicio
+      </a>
+    </div>
+  </div>
+</Layout>

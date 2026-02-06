@@ -1,0 +1,23 @@
+{
+  "title": {
+    "es": "Refugio Creativo",
+    "en": "Creative Shelter"
+  },
+  "description": {
+    "es": "Un refugio personal donde la calidez de los materiales naturales abraza la tecnología. Texturas orgánicas y tonos tierra crean un ambiente acogedor que invita a la exploración creativa sin límites.",
+    "en": "A personal refuge where the warmth of natural materials embraces technology. Organic textures and earth tones create a cozy environment that invites limitless creative exploration."
+  },
+  "coverImage": "../../assets/placeholders/mw4.jpg",
+  "tags": [
+    "Apple",
+    "Light",
+    "Workspace"
+  ],
+  "specs": {
+    "computer": "Mac Studio",
+    "monitor": "Studio Display",
+    "keyboard": "Keychron Q1",
+    "mouse": "Magic Trackpad"
+  },
+  "publishDate": "2024-04-05"
+}
