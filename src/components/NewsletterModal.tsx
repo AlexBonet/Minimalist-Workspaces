@@ -91,7 +91,7 @@ export default function NewsletterModal({ lang = "en" }: NewsletterModalProps) {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       disabled={status === "loading"}
-                      className="w-full bg-transparent border-b-2 border-black py-2 text-xl md:text-2xl font-mono focus:outline-none placeholder:text-gray-500 rounded-none"
+                      className="w-full bg-transparent border-b-2 border-black py-2 text-xl md:text-2xl font-mono focus:outline-none placeholder:text-gray-500"
                       required
                     />
                   </div>

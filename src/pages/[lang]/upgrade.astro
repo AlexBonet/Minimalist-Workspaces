@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { ui } from "../../i18n/ui";
+import AuditModal from "../../components/AuditModal.tsx";
 
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
@@ -119,12 +120,7 @@ const c = content[lang];
             {c.ctaNote}
           </p>
         </div>
-        <a
-          href="mailto:hello@minimalistworkspaces.com?subject=Setup%20Upgrade%20Consultation"
-          class="bg-black text-white px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-gray-800 transition-colors inline-block"
-        >
-          {c.cta} →
-        </a>
+        <AuditModal lang={lang} client:load />
       </div>
     </section>
   </div>
