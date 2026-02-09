@@ -21,6 +21,14 @@ El proyecto se adhiere al **Estilo Tipográfico Internacional (Estilo Suizo)**:
 - **Tipografía**: Sans-serif (Inter/System), tracking ajustado, alto contraste (Blanco y Negro).
 - **Minimalismo**: Eliminación de elementos no esenciales. "Menos es más".
 
+## 💰 Estrategia de Monetización
+
+El modelo de sostenibilidad del proyecto se basa en **servicios de consultoría especializada**:
+
+- **Optimización de espacios de trabajo**: Análisis personalizado de configuraciones existentes para mejorar la ergonomía, la iluminación y la gestión de cables.
+- **Asesoramiento Estético**: Recomendaciones seleccionadas de mobiliario y accesorios que se alinean con la filosofía minimalista del "Estilo Suizo".
+- **Ajuste de Rendimiento**: Asesoramiento técnico para configuraciones de oficina en casa de alto rendimiento.
+
 ## 🛠️ Comenzando
 
 ### Prerrequisitos
@@ -92,4 +100,3 @@ tests/
 
 ---
 © 2026 AlexBonet.
-∫

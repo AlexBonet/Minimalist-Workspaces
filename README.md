@@ -21,6 +21,14 @@ The project adheres to **International Typographic Style (Swiss Style)**:
 - **Typography**: Sans-serif (Inter/System), tight tracking, high contrast (Black & White).
 - **Minimalism**: Removal of non-essential elements. "Less is more."
 
+## 💰 Monetization Strategy
+
+The project's sustainability model is based on **specialized consultancy services**:
+
+- **Workspace Optimization**: Personalized analysis of existing setups to improve ergonomics, lighting, and cable management.
+- **Aesthetic Guidance**: Curated recommendations for furniture and accessories that align with the "Swiss Style" minimalist philosophy.
+- **Performance Tuning**: Technical advice for high-performance home office configurations.
+
 ## 🛠️ Getting Started
 
 ### Prerequisites
