@@ -6,6 +6,8 @@ Una galería minimalista de espacios de trabajo de alto rendimiento, construida 
 
 [🇺🇸 Read in English](./README.md)
 
+🚀 **Demo en vivo**: [minimalistworkspaces.netlify.app](https://minimalistworkspaces.netlify.app)
+
 ## 🚀 Tech Stack
 
 - **Core**: [Astro 5.0](https://astro.build) (Generación de Sitios Estáticos)
