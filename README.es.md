@@ -21,6 +21,13 @@ El proyecto se adhiere al **Estilo Tipográfico Internacional (Estilo Suizo)**:
 - **Tipografía**: Sans-serif (Inter/System), tracking ajustado, alto contraste (Blanco y Negro).
 - **Minimalismo**: Eliminación de elementos no esenciales. "Menos es más".
 
+## 📊 Presentación del Proyecto
+
+Puedes ver las diapositivas de la presentación del proyecto aquí:
+
+- [📄 Presentación (PDF)](./docs/Presentación%20Minimalist%20workspace.pdf)
+- [🖥️ Presentación (PPTX)](./docs/Presentación%20Minimalist%20workspace.pptx)
+
 ## 💰 Estrategia de Monetización
 
 El modelo de sostenibilidad del proyecto se basa en **servicios de consultoría especializada**:

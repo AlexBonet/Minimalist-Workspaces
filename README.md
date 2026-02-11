@@ -21,6 +21,13 @@ The project adheres to **International Typographic Style (Swiss Style)**:
 - **Typography**: Sans-serif (Inter/System), tight tracking, high contrast (Black & White).
 - **Minimalism**: Removal of non-essential elements. "Less is more."
 
+## 📊 Project Presentation
+
+You can view the project presentation slides here:
+
+- [📄 Presentation (PDF)](./docs/Presentación%20Minimalist%20workspace.pdf)
+- [🖥️ Presentation (PPTX)](./docs/Presentación%20Minimalist%20workspace.pptx)
+
 ## 💰 Monetization Strategy
 
 The project's sustainability model is based on **specialized consultancy services**:
